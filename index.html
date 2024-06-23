@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rick and Morty Characters</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+<header>
+    <div id="filters">
+        <h1>Rick and Morty Characters</h1>
+        <input type="text" id="searchBox" placeholder="Поиск персонажей...">
+
+        <label for="statusFilter">Статус:</label>
+        <select id="statusFilter">
+            <option value="">Все</option>
+            <option value="alive">Живой</option>
+            <option value="dead">Мертвый</option>
+            <option value="unknown">Неизвестно</option>
+        </select>
+
+        <label for="speciesFilter">Вид:</label>
+        <select id="speciesFilter">
+            <option value="">Все</option>
+            <option value="Human">Человек</option>
+            <option value="Alien">Инопланетянин</option>
+
+        </select>
+
+        <label for="genderFilter">Пол:</label>
+        <select id="genderFilter">
+            <option value="">Все</option>
+            <option value="male">Мужской</option>
+            <option value="female">Женский</option>
+            <option value="genderless">Бесполый</option>
+            <option value="unknown">Неизвестно</option>
+        </select>
+
+        <button onclick="applyFilters()">Применить фильтры</button>
+    </div>
+
+</header>
+<section id="characterGrid"></section>
+<div id="detailPage" style="display: none;">
+    <button onclick="backToList()">Назад к списку</button>
+    <div id="characterDetail"></div>
+</div>
+<div id="pagination">
+    <button onclick="changePage(-1)">Назад</button>
+    <span id="currentPage">1</span>
+    <button onclick="changePage(1)">Вперед</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

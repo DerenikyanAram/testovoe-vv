@@ -1,0 +1,124 @@
+body, html {
+    font-family: 'Roboto', sans-serif;
+}
+
+#characterGrid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* Обеспечивает равномерное распределение карточек */
+    padding: 20px;
+    background-color: rgb(32, 35, 41); /* Светлый фон для контраста */
+
+}
+
+.character-card {
+    background-color: rgb(20 23 29);
+    margin: 10px 5px; /* Небольшой отступ справа и слева */
+    width: calc(50% - 20px); /* Расчет ширины для 2 карточек на строку, учитывая маргины */
+    display: flex;
+    flex-direction: row; /* Горизонтальное расположение изображения и информации */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    color: #fff;
+
+}
+
+.character-card img {
+    width: 150px; /* Фиксированная ширина изображения */
+    height: 100%; /* Высота изображения равна высоте карточки */
+    object-fit: cover; /* Обрезка изображения по размеру контейнера */
+    border-right: 1px solid #ddd; /* Разделитель между изображением и текстом */
+}
+
+.character-card:hover {
+    transform: translateY(-5px); /* Небольшое поднятие карточки при наведении */
+}
+
+.character-info {
+    padding: 10px;
+    flex-grow: 1; /* Заполняет оставшееся место в карточке */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+}
+
+.character-info h2 {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 5px 0 10px 0;
+}
+
+.character-info p {
+    font-size: 16px;
+    margin: 4px 0;
+}
+
+.status-dot {
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+}
+
+.status-alive {
+    background-color: green;
+}
+
+.status-dead {
+    background-color: red;
+}
+
+.status-unknown {
+    background-color: grey;
+}
+#pagination {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#pagination button {
+    padding: 8px 16px;
+    margin: 0 5px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#pagination button:disabled {
+    background-color: #bbb;
+    cursor: default;
+}
+#filters {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px 0;
+    background-color: #f4f4f4;
+}
+
+#filters label {
+    margin-right: 5px;
+    font-size: 16px;
+    color: #333;
+    font-weight: bold;
+}
+
+#filters input, #filters select {
+    padding: 8px;
+    margin: 0 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#filters button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+}
+
